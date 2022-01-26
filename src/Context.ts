@@ -96,6 +96,7 @@ export class Context<L extends number = 5> {
         (pair) => pair.count === best.count
       );
       const rnd = Math.floor(Math.random() * filteredCandidates.length);
+      console.log('possible words: ', filteredCandidates.map(c => c.word));
       return filteredCandidates[rnd].word;
     } else {
       const rnd = Math.floor(Math.random() * this.wordList.length);
