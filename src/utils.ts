@@ -38,7 +38,7 @@ export function check(input: string, expected: string): Answer[] {
 }
 
 export async function loadDict(length: number): Promise<string[]> {
-  const filename = path.join(process.cwd(), 'dict', 'dict_alpha.txt');
+  const filename = path.join(process.cwd(), 'dict', 'dict_wordle.txt');
   const txt = await new Promise<string>((resolve) => {
     fs.readFile(filename, 'utf-8', (err, data) => {
       resolve(data);
