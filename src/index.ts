@@ -14,7 +14,7 @@ async function main() {
     const { answer } = await inquirer.prompt<{ answer: string }>({
       type: 'input',
       name: 'answer',
-      message: `The answer of "${attempt}" (empty to skip)`,
+      message: `The answer of "${attempt}" e.g. EEYYG (empty to skip)`,
       validate: (input: string) => {
         if (input.length === 0) return true;
         return (
