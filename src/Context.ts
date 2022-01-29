@@ -24,7 +24,7 @@ export class Context<L extends number = 5> {
   }
 
   async init() {
-    console.log('initializing');
+    // console.log('initializing');
     this.wordList = await loadDict(this.length);
     writeDict(this.wordList);
   }
@@ -96,7 +96,7 @@ export class Context<L extends number = 5> {
         (pair) => pair.count === best.count
       );
       const rnd = Math.floor(Math.random() * filteredCandidates.length);
-      console.log('possible words: ', filteredCandidates.map(c => c.word));
+      // console.log('possible words: ', filteredCandidates.map(c => c.word));
       return filteredCandidates[rnd].word;
     } else {
       const rnd = Math.floor(Math.random() * this.wordList.length);
@@ -153,7 +153,7 @@ export class Context<L extends number = 5> {
       }
     }
     rules.push(this.buildWholeRegexp());
-    console.log(rules);
+    // console.log(rules);
 
     let result = this.wordList;
     for (let i = 0; i < rules.length; i++) {
